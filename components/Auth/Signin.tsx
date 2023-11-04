@@ -50,7 +50,7 @@ const Signin = () => {
             className="animate_top rounded-lg bg-white px-7.5 pt-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black xl:px-15 xl:pt-15"
           >
             <h2 className="mb-15 text-center text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
-              Login to Your Account
+              Войти в систему
             </h2>
             <div className="flex flex-col">
               <div className="flex items-center gap-8">
@@ -91,14 +91,14 @@ const Signin = () => {
                       </defs>
                     </svg>
                   </span>
-                  Signup with Google
+                  Войти с помощью Google
                 </button>
               </div>
             </div>
             <div className="mb-10 flex items-center justify-center">
               <span className="dark:bg-stroke-dark hidden h-[1px] w-full max-w-[200px] bg-stroke dark:bg-strokedark sm:block"></span>
               <p className="text-body-color dark:text-body-color-dark w-full px-5 text-center text-base">
-                Or, login with your email
+                Войти через систему
               </p>
               <span className="dark:bg-stroke-dark hidden h-[1px] w-full max-w-[200px] bg-stroke dark:bg-strokedark sm:block"></span>
             </div>
@@ -107,7 +107,7 @@ const Signin = () => {
               <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
                 <input
                   type="text"
-                  placeholder="Email"
+                  placeholder="Логин"
                   name="email"
                   value={data.email}
                   onChange={(e) => setData({ ...data, email: e.target.value })}
@@ -116,7 +116,7 @@ const Signin = () => {
 
                 <input
                   type="password"
-                  placeholder="Password"
+                  placeholder="Пароль"
                   name="password"
                   value={data.password}
                   onChange={(e) =>
@@ -155,44 +155,45 @@ const Signin = () => {
                       htmlFor="default-checkbox"
                       className="flex max-w-[425px] cursor-pointer select-none pl-3"
                     >
-                      Keep me signed in
+                      Запомнить меня в системе
                     </label>
                   </div>
 
                   <a href="#" className="hover:text-primary">
-                    Forgot Password?
+                    Забыли пароль?
                   </a>
                 </div>
 
-                <button
-                  aria-label="login with email and password"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
-                >
-                  Log in
+                <Link
+                    href="/"
+                    aria-label="login with email and password"
+                    className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+                >Войти
                   <svg
-                    className="fill-white"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                      className="fill-white"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
-                      fill=""
+                        d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
+                        fill=""
                     />
                   </svg>
-                </button>
+                </Link>
+
               </div>
 
               <div className="mt-12.5 border-t border-stroke py-5 text-center dark:border-strokedark">
                 <p>
-                  Don't have an account?{" "}
+                  Нету аккаунта?{" "}
                   <Link
                     className="text-black hover:text-primary dark:text-white hover:dark:text-primary"
                     href="/auth/signup"
                   >
-                    Sign Up
+                    Создать
                   </Link>
                 </p>
               </div>
