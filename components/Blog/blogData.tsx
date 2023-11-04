@@ -11,37 +11,41 @@ const BlogData: Blog[] = [
   {
     _id: 2,
     mainImage: "/images/blog/blog-02.png",
-    title: "9 simple ways to improve your design skills",
+    title: "Система госзакупок позволяет отмывать деньги, признал Акылбек Жапаров",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "Система госзакупок позволяет отмывать деньги, признал Акылбек Жапаров",
   },
   {
     _id: 2,
     mainImage: "/images/blog/blog-03.png",
-    title: "Tips to quickly improve your coding speed.",
+    title: "В Кыргызстане появится новый формат госзакупок — как будет работать",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
-  },
-  {
-    _id: 1,
-    mainImage: "/images/blog/blog-03.png",
-    title: "Free advertising for your online business",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "В Кыргызстане появится новый формат госзакупок — как будет работать",
   },
   {
     _id: 2,
     mainImage: "/images/blog/blog-04.png",
-    title: "9 simple ways to improve your design skills",
+    title: "В Кыргызстане внесены изменения в закон о госзакупках — касается лекарств",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "В Кыргызстане внесены изменения в закон о госзакупках — касается лекарств",
   },
   {
     _id: 2,
-    mainImage: "/images/blog/blog-01.png",
-    title: "Tips to quickly improve your coding speed.",
+    mainImage: "/images/blog/blog-05.png",
+    title: "Итоги конкурса на закупку 100 новых автобусов для Бишкека отменены. Причина\n" +
+        "Автобусы подаренные Китаем у здания мэрии города Бишкек. Архивное фото - Sputnik Кыргызстан",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "Итоги конкурса на закупку 100 новых автобусов для Бишкека отменены. Причина\n" +
+        "Автобусы подаренные Китаем у здания мэрии города Бишкек. Архивное фото - Sputnik Кыргызстан",
+  },
+  {
+    _id: 2,
+    mainImage: "/images/blog/blog-05.png",
+    title: "Итоги конкурса на закупку 100 новых автобусов для Бишкека отменены. Причина\n" +
+        "Автобусы подаренные Китаем у здания мэрии города Бишкек. Архивное фото - Sputnik Кыргызстан",
+    metadata:
+        "Итоги конкурса на закупку 100 новых автобусов для Бишкека отменены. Причина\n" +
+        "Автобусы подаренные Китаем у здания мэрии города Бишкек. Архивное фото - Sputnik Кыргызстан",
   },
 ];
 

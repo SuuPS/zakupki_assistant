@@ -34,7 +34,7 @@ const menuData: Menu[] = [
         id: 231,
         title: "Обучение ИП, ОСОО",
         newTab: false,
-        path: "/docs",
+        path: "/train",
       },
       {
         id: 232,
