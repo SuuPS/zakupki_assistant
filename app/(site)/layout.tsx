@@ -2,6 +2,7 @@
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Bot from "@/components/bot";
 import Lines from "@/components/Lines";
 import ScrollToTop from "@/components/ScrollToTop";
 import { ThemeProvider } from "next-themes";
@@ -26,6 +27,7 @@ export default function RootLayout({
         >
           <Lines />
           <Header />
+          <Bot />
           <ToasterContext />
           {children}
           <Footer />

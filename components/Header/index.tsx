@@ -39,17 +39,18 @@ const Header = () => {
                 <div className="flex w-full items-center justify-between xl:w-1/4">
                     <a href="/">
                         <Image
-                            src="/images/logo/logo-dark.svg"
+                            src="/images/logo/kyrgyz.png"
                             alt="logo"
-                            width={119.03}
-                            height={30}
+                            width={40} // Уменьшите ширину
+                            height={10} // Уменьшите высоту
                             className="hidden w-full dark:block"
                         />
+
                         <Image
-                            src="/images/logo/logo-light.svg"
+                            src="/images/logo/kyrgyz.png"
                             alt="logo"
-                            width={119.03}
-                            height={30}
+                            width={40} // Уменьшите ширину
+                            height={10} // Уменьшите высоту
                             className="w-full dark:hidden"
                         />
                     </a>

@@ -22,21 +22,14 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <Brands />
-      <Feature />
-      <About />
-      <FeaturesTab />
-      <FunFact />
-      <Integration />
-      <CTA />
-      <FAQ />
-      <Testimonial />
-      <Pricing />
-      <Contact />
-      <Blog />
-        <Announcements />
-    </main>
+      <main>
+          <Hero/>
+          <Brands/>
+          <CTA/>
+          <About/>
+          <FunFact/>
+          <Testimonial/>
+          <Blog/>
+      </main>
   );
 }
