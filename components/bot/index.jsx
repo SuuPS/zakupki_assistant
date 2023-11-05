@@ -13,11 +13,12 @@ const Bot = () => {
 
     const [result, setResult] = useState([]);
     const [index, setIndex] = useState(0);
+    const [botOpen, setBotOpen] = useState(true);
 
     useEffect(() => {
-        const interval = 30000; // Интервал в миллисекундах (5 секунд)
+        const interval = 60000; // Интервал в миллисекундах (30 секунд)
 
-        if (index < datas.length) {
+        if (botOpen && index < datas.length) {
             const timer = setTimeout(() => {
                 setResult((prevResult) => [...prevResult, datas[index]]);
                 setIndex((prevIndex) => prevIndex + 1);
@@ -34,27 +35,48 @@ const Bot = () => {
 
             return () => clearTimeout(timer);
         }
-    }, [index, datas]);
+    }, [botOpen, index, datas]);
+
+    const toggleBot = () => {
+        setBotOpen(!botOpen);
+    };
 
     return (
         <div className="">
-            <div className="lg:fixed sm:mt-20 right-10 bottom-5 z-99999" style={{ width: "500px" }}>
-                {result.map((item, index) => (
-                    <div key={index} className="message-animation">
-                        <div className="border border-gray-300 shadow-lg rounded-lg p-4">
-                            <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
-                                <div className="flex items-center">
-                                    <p className="font-semibold text-blue-500">Bot:</p>
-                                </div>
-                                <div className="mt-2">
-                                    <p className="text-gray-800"><span className="font-medium">№ объявления: </span>{item.number}</p>
-                                    <p className="text-gray-800"><span className="font-medium">Название: </span>{item.name}</p>
+            <button
+                className="fixed z-99999 bottom-2 right-10"
+                onClick={toggleBot}
+                style={{
+                    backgroundColor: "blue", // Цвет фона кнопки
+                    color: "white", // Цвет текста кнопки
+                    padding: "10px 20px", // Внутренние отступы
+                    border: "none", // Убираем границу
+                    borderRadius: "5px", // Закругляем углы
+                    cursor: "pointer", // Изменяем курсор при наведении
+                }}
+            >
+                Toggle Bot
+            </button>
+
+            {botOpen && (
+                <div className="lg:fixed sm:mt-20 right-10 bottom-15 z-99999" style={{ width: "500px" }}>
+                    {result.map((item, index) => (
+                        <div key={index} className="message-animation">
+                            <div className="border border-gray-300 shadow-lg rounded-lg p-4">
+                                <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+                                    <div className="flex items-center">
+                                        <p className="font-semibold text-blue-500">Bot:</p>
+                                    </div>
+                                    <div className="mt-2">
+                                        <p className="text-gray-800"><span className="font-medium">№ объявления: </span>{item.number}</p>
+                                        <p className="text-gray-800"><span className="font-medium">Название: </span>{item.name}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };
